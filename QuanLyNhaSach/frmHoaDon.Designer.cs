@@ -673,11 +673,11 @@ namespace QuanLyNhaSach
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(530, 38);
+            this.label6.Location = new System.Drawing.Point(469, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 31);
+            this.label6.Size = new System.Drawing.Size(263, 31);
             this.label6.TabIndex = 26;
-            this.label6.Text = "CHI TIẾT";
+            this.label6.Text = "CHI TIẾT HÓA ĐƠN";
             // 
             // label2
             // 
