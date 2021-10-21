@@ -8,3 +8,18 @@ D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.pdb
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.exe
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.pdb
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.MainForm.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe.config
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.pdb
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csprojAssemblyReference.cache
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.Dausach.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.MainForm.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.frmHoaDon.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.LoginForm.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.Properties.Resources.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.RegisterForm.resources
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.GenerateResource.cache
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.CoreCompileInputs.cache
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.exe
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.pdb
+D:\HK5 ONLINE\HQTCSDL\QLNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ChiTietSach.resources

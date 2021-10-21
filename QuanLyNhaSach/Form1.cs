@@ -19,5 +19,10 @@ namespace QuanLyNhaSach
             InitializeComponent();
         }
 
+        private void dauSachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dausach frm = new Dausach();
+            frm.ShowDialog();
+        }
     }
 }
