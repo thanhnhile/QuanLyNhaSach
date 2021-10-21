@@ -65,8 +65,6 @@ namespace QuanLyNhaSach
             // 
             // ChiTietDauSach
             // 
-            this.ChiTietDauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ChiTietDauSach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ChiTietDauSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ChiTietDauSach.Location = new System.Drawing.Point(29, 206);
             this.ChiTietDauSach.Name = "ChiTietDauSach";

@@ -45,17 +45,7 @@ namespace QuanLyNhaSach
             DataTable table = getTable(command);
             return table;
         }
-        /*[TuaSach]
-           ,[NamXB]
-           ,[TenTacGia]
-           ,[TenNgonNgu]
-           ,[TenNCC]
-           ,[TenNXB]
-           ,[TenTL]
-           ,[GiaBan]
-           ,[MoTa])
-           */
-        public bool insertViewSach(String tua,int namXB,String tg,string ngonngu,string ncc,string nxb,string tl,
+        public bool insertViewSach(string tua,int namXB,string tg,string ngonngu,string ncc,string nxb,string tl,
             int gia,string mota)
         {
             SqlCommand command = new SqlCommand("insert into ChiTietDauSach(TuaSach,NamXB,TenTacGia,TenNgonNgu,TenNCC,TenNXB,TenTL,GiaBan,MoTa)" +
@@ -69,7 +59,44 @@ namespace QuanLyNhaSach
             command.Parameters.Add("@tl", SqlDbType.NVarChar).Value = tl;
             command.Parameters.Add("@gia", SqlDbType.NVarChar).Value = gia;
             command.Parameters.Add("@mota", SqlDbType.Text).Value = mota;
-                 db.openConnection();
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public bool updateDauSach(string ma,string tua,int namXB,int gia,string mota, System.IO.MemoryStream anh)
+        {
+            SqlCommand command = new SqlCommand("exec dbo.sp_UpdateDauSach @Ma,@TuaSach,@AnhBia,@NamXB,@Gia,@Mota", db.GetConnection);
+            command.Parameters.Add("@Ma", SqlDbType.Char).Value = ma;
+            command.Parameters.Add("@AnhBia", SqlDbType.Image).Value = anh;
+            command.Parameters.Add("@TuaSach", SqlDbType.NVarChar).Value = tua;
+            command.Parameters.Add("@NamXB", SqlDbType.Int).Value = namXB;
+            command.Parameters.Add("@Gia", SqlDbType.Int).Value = gia;
+            command.Parameters.Add("@Mota", SqlDbType.Text).Value = mota;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public bool deleteViewSach(string ma)
+        {
+            SqlCommand command = new SqlCommand("delete from ChiTietDauSach where MaSach=@ma", db.GetConnection);
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = ma;
+            db.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
                 db.closeConnection();

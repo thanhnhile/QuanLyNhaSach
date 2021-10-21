@@ -29,15 +29,10 @@ namespace QuanLyNhaSach
             {
                 this.id.Text = table.Rows[0][0].ToString();
                 this.tuatxt.Text = table.Rows[0][1].ToString();
-                if (table.Rows[0][2] != DBNull.Value )
-                {
-                    var data = (byte[])table.Rows[0][2];
-                    if (data.Length > 0)
-                    {
-                        var stream = new MemoryStream(data);
-                        anhbia.Image = Image.FromStream(stream);
-                    }
-                }
+                byte[] pic;
+                pic = (byte[])table.Rows[0]["AnhBia"];
+                MemoryStream picture = new MemoryStream(pic);
+                this.anhbia.Image = Image.FromStream(picture);
                 this.anhbia.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.namxbtxt.Text = table.Rows[0][3].ToString();
                 this.tgtxt.Text = table.Rows[0][4].ToString();
@@ -66,7 +61,7 @@ namespace QuanLyNhaSach
                 string mota = this.motatxt.Text;
                 if (dao.insertViewSach(tuaSach,namXB,tacgia,ngongu,ncc,nxb,theloai,gia,mota))
                 {
-                    MessageBox.Show("Thêm sách thành công", "Thêm sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm sách thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
@@ -74,6 +69,47 @@ namespace QuanLyNhaSach
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void updbtn_Click(object sender, EventArgs e)
+        {
+            string maSach = this.id.Text;
+            string tuaSach = this.tuatxt.Text;
+            int namXB = int.Parse(this.namxbtxt.Text);
+            int gia = int.Parse(this.giatxt.Text);
+            string mota = this.motatxt.Text;
+            MemoryStream picture = new MemoryStream();
+            try
+            {
+               anhbia.Image.Save(picture, anhbia.Image.RawFormat);
+                if (dao.updateDauSach(maSach, tuaSach, namXB, gia, mota, picture))
+                {
+                    MessageBox.Show("Cập nhật thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Select Image (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                this.anhbia.Image = Image.FromFile(ofd.FileName);
+            }
+        }
+
+        private void delbtn_Click(object sender, EventArgs e)
+        {
+            string maSach = this.id.Text;
+            if (dao.deleteViewSach(maSach))
+            {
+                MessageBox.Show("Xóa thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -55,6 +55,7 @@ namespace QuanLyNhaSach
             this.updbtn = new System.Windows.Forms.Button();
             this.delbtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
+            this.upload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.anhbia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,9 +263,13 @@ namespace QuanLyNhaSach
             // 
             // anhbia
             // 
+            this.anhbia.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.anhbia.Image = global::QuanLyNhaSach.Properties.Resources.none_image;
+            this.anhbia.InitialImage = global::QuanLyNhaSach.Properties.Resources.none_image;
             this.anhbia.Location = new System.Drawing.Point(522, 382);
             this.anhbia.Name = "anhbia";
-            this.anhbia.Size = new System.Drawing.Size(131, 136);
+            this.anhbia.Size = new System.Drawing.Size(146, 150);
+            this.anhbia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.anhbia.TabIndex = 22;
             this.anhbia.TabStop = false;
             // 
@@ -280,6 +285,7 @@ namespace QuanLyNhaSach
             this.updbtn.TabIndex = 25;
             this.updbtn.Text = "Cập nhật";
             this.updbtn.UseVisualStyleBackColor = false;
+            this.updbtn.Click += new System.EventHandler(this.updbtn_Click);
             // 
             // delbtn
             // 
@@ -293,6 +299,7 @@ namespace QuanLyNhaSach
             this.delbtn.TabIndex = 24;
             this.delbtn.Text = "Xóa";
             this.delbtn.UseVisualStyleBackColor = false;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
             // 
             // addbtn
             // 
@@ -308,11 +315,24 @@ namespace QuanLyNhaSach
             this.addbtn.UseVisualStyleBackColor = false;
             this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
+            // upload
+            // 
+            this.upload.BackColor = System.Drawing.SystemColors.GrayText;
+            this.upload.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.upload.Location = new System.Drawing.Point(674, 382);
+            this.upload.Name = "upload";
+            this.upload.Size = new System.Drawing.Size(57, 64);
+            this.upload.TabIndex = 26;
+            this.upload.Text = "Tải lên";
+            this.upload.UseVisualStyleBackColor = false;
+            this.upload.Click += new System.EventHandler(this.upload_Click);
+            // 
             // ChiTietSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 624);
+            this.Controls.Add(this.upload);
             this.Controls.Add(this.updbtn);
             this.Controls.Add(this.delbtn);
             this.Controls.Add(this.addbtn);
@@ -378,5 +398,6 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Button updbtn;
         private System.Windows.Forms.Button delbtn;
         private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button upload;
     }
 }
