@@ -59,16 +59,22 @@ namespace QuanLyNhaSach
                 string theloai = this.tltxt.Text;
                 int gia = int.Parse(this.giatxt.Text);
                 string mota = this.motatxt.Text;
-                if (dao.insertViewSach(tuaSach,namXB,tacgia,ngongu,ncc,nxb,theloai,gia,mota))
+                MemoryStream picture = new MemoryStream();
+                if (dao.insertViewSach(tuaSach, namXB, tacgia, ngongu, ncc, nxb, theloai, gia, mota))
                 {
-                    MessageBox.Show("Thêm sách thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string ma = dao.getIdNewBook();
+                    anhbia.Image.Save(picture, anhbia.Image.RawFormat);
+                    if (dao.updateAnhBia(ma, picture))
+                    {
+                        MessageBox.Show("Thêm sách thành công", "Thêm sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                   
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void updbtn_Click(object sender, EventArgs e)
@@ -81,10 +87,14 @@ namespace QuanLyNhaSach
             MemoryStream picture = new MemoryStream();
             try
             {
-               anhbia.Image.Save(picture, anhbia.Image.RawFormat);
+                 anhbia.Image.Save(picture, anhbia.Image.RawFormat);
                 if (dao.updateDauSach(maSach, tuaSach, namXB, gia, mota, picture))
                 {
                     MessageBox.Show("Cập nhật thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin sách", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)
@@ -106,10 +116,26 @@ namespace QuanLyNhaSach
         private void delbtn_Click(object sender, EventArgs e)
         {
             string maSach = this.id.Text;
-            if (dao.deleteViewSach(maSach))
+            try
             {
-                MessageBox.Show("Xóa thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(MessageBox.Show("Bạn có chắc chắn muốn xóa đầu sách này?","Thông tin sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (dao.deleteViewSach(maSach))
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin sách", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+                }
+                
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
         }
     }
 }

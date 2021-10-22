@@ -52,10 +52,10 @@ namespace QuanLyNhaSach
             this.label12 = new System.Windows.Forms.Label();
             this.motatxt = new System.Windows.Forms.TextBox();
             this.anhbia = new System.Windows.Forms.PictureBox();
-            this.updbtn = new System.Windows.Forms.Button();
-            this.delbtn = new System.Windows.Forms.Button();
-            this.addbtn = new System.Windows.Forms.Button();
             this.upload = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
+            this.updatbtn = new System.Windows.Forms.Button();
+            this.delbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.anhbia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,6 +217,7 @@ namespace QuanLyNhaSach
             // 
             // id
             // 
+            this.id.Enabled = false;
             this.id.Location = new System.Drawing.Point(358, 93);
             this.id.Margin = new System.Windows.Forms.Padding(2);
             this.id.Name = "id";
@@ -273,48 +274,6 @@ namespace QuanLyNhaSach
             this.anhbia.TabIndex = 22;
             this.anhbia.TabStop = false;
             // 
-            // updbtn
-            // 
-            this.updbtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.updbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.updbtn.Location = new System.Drawing.Point(358, 539);
-            this.updbtn.Name = "updbtn";
-            this.updbtn.Size = new System.Drawing.Size(103, 38);
-            this.updbtn.TabIndex = 25;
-            this.updbtn.Text = "Cập nhật";
-            this.updbtn.UseVisualStyleBackColor = false;
-            this.updbtn.Click += new System.EventHandler(this.updbtn_Click);
-            // 
-            // delbtn
-            // 
-            this.delbtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.delbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.delbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.delbtn.Location = new System.Drawing.Point(192, 539);
-            this.delbtn.Name = "delbtn";
-            this.delbtn.Size = new System.Drawing.Size(97, 38);
-            this.delbtn.TabIndex = 24;
-            this.delbtn.Text = "Xóa";
-            this.delbtn.UseVisualStyleBackColor = false;
-            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
-            // 
-            // addbtn
-            // 
-            this.addbtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.addbtn.Location = new System.Drawing.Point(36, 539);
-            this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(93, 38);
-            this.addbtn.TabIndex = 23;
-            this.addbtn.Text = "Thêm";
-            this.addbtn.UseVisualStyleBackColor = false;
-            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
-            // 
             // upload
             // 
             this.upload.BackColor = System.Drawing.SystemColors.GrayText;
@@ -327,15 +286,51 @@ namespace QuanLyNhaSach
             this.upload.UseVisualStyleBackColor = false;
             this.upload.Click += new System.EventHandler(this.upload_Click);
             // 
+            // addbtn
+            // 
+            this.addbtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.addbtn.Location = new System.Drawing.Point(55, 528);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(99, 36);
+            this.addbtn.TabIndex = 27;
+            this.addbtn.Text = "Thêm";
+            this.addbtn.UseVisualStyleBackColor = false;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
+            // 
+            // updatbtn
+            // 
+            this.updatbtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.updatbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.updatbtn.Location = new System.Drawing.Point(202, 528);
+            this.updatbtn.Name = "updatbtn";
+            this.updatbtn.Size = new System.Drawing.Size(99, 36);
+            this.updatbtn.TabIndex = 28;
+            this.updatbtn.Text = "Cập nhật";
+            this.updatbtn.UseVisualStyleBackColor = false;
+            this.updatbtn.Click += new System.EventHandler(this.updbtn_Click);
+            // 
+            // delbtn
+            // 
+            this.delbtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.delbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.delbtn.Location = new System.Drawing.Point(347, 528);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(99, 36);
+            this.delbtn.TabIndex = 29;
+            this.delbtn.Text = "Xóa";
+            this.delbtn.UseVisualStyleBackColor = false;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
+            // 
             // ChiTietSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 624);
-            this.Controls.Add(this.upload);
-            this.Controls.Add(this.updbtn);
             this.Controls.Add(this.delbtn);
+            this.Controls.Add(this.updatbtn);
             this.Controls.Add(this.addbtn);
+            this.Controls.Add(this.upload);
             this.Controls.Add(this.anhbia);
             this.Controls.Add(this.motatxt);
             this.Controls.Add(this.label12);
@@ -395,9 +390,9 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox motatxt;
         private System.Windows.Forms.PictureBox anhbia;
-        private System.Windows.Forms.Button updbtn;
-        private System.Windows.Forms.Button delbtn;
-        private System.Windows.Forms.Button addbtn;
         private System.Windows.Forms.Button upload;
+        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button updatbtn;
+        private System.Windows.Forms.Button delbtn;
     }
 }

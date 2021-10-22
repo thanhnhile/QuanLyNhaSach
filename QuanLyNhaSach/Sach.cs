@@ -21,15 +21,31 @@ namespace QuanLyNhaSach
             adapter.Fill(table);
             return table;
         }
-        private void fillGrid(DataGridView dgv, SqlCommand command)
+        public  string getIdNewBook()
         {
-            dgv.ReadOnly = true;
-            dgv.RowTemplate.Height = 80;
-            dgv.DataSource = getTable(command);
-            DataGridViewImageColumn pic = new DataGridViewImageColumn();
-            pic = (DataGridViewImageColumn)dgv.Columns["AnhBia"];
-            pic.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dgv.AllowUserToAddRows = false;
+            string id;
+            SqlCommand command = new SqlCommand("SELECT [dbo].[func_NewIdSach] ()", db.GetConnection);
+            DataTable table = this.getTable(command);
+            id = table.Rows[0][0].ToString();
+            return id;
+
+        }
+        public bool updateAnhBia(string ma, System.IO.MemoryStream anh)
+        {
+            SqlCommand command = new SqlCommand("update DauSach set AnhBia=@anh where MaSach = @ma", db.GetConnection);
+            command.Parameters.Add("@anh", SqlDbType.Image).Value = anh.ToArray();
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = ma;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
         }
         public DataTable getViewBook()
         {
@@ -75,7 +91,7 @@ namespace QuanLyNhaSach
         {
             SqlCommand command = new SqlCommand("exec dbo.sp_UpdateDauSach @Ma,@TuaSach,@AnhBia,@NamXB,@Gia,@Mota", db.GetConnection);
             command.Parameters.Add("@Ma", SqlDbType.Char).Value = ma;
-            command.Parameters.Add("@AnhBia", SqlDbType.Image).Value = anh;
+            command.Parameters.Add("@AnhBia", SqlDbType.Image).Value = anh.ToArray();
             command.Parameters.Add("@TuaSach", SqlDbType.NVarChar).Value = tua;
             command.Parameters.Add("@NamXB", SqlDbType.Int).Value = namXB;
             command.Parameters.Add("@Gia", SqlDbType.Int).Value = gia;
