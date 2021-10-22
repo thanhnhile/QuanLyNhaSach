@@ -50,26 +50,31 @@ namespace QuanLyNhaSach
         {
             try
             {
-                string tuaSach = this.tuatxt.Text;
-                int namXB = int.Parse(this.namxbtxt.Text);
-                string tacgia = this.tgtxt.Text;
-                string ngongu = this.ngngutxt.Text;
-                string ncc = this.ncctxt.Text;
-                string nxb = this.nxbtxt.Text;
-                string theloai = this.tltxt.Text;
-                int gia = int.Parse(this.giatxt.Text);
-                string mota = this.motatxt.Text;
-                MemoryStream picture = new MemoryStream();
-                if (dao.insertViewSach(tuaSach, namXB, tacgia, ngongu, ncc, nxb, theloai, gia, mota))
+                if (verif())
                 {
-                    string ma = dao.getIdNewBook();
-                    anhbia.Image.Save(picture, anhbia.Image.RawFormat);
-                    if (dao.updateAnhBia(ma, picture))
+                    string tuaSach = this.tuatxt.Text;
+                    int namXB = int.Parse(this.namxbtxt.Text);
+                    string tacgia = this.tgtxt.Text;
+                    string ngongu = this.ngngutxt.Text;
+                    string ncc = this.ncctxt.Text;
+                    string nxb = this.nxbtxt.Text;
+                    string theloai = this.tltxt.Text;
+                    int gia = int.Parse(this.giatxt.Text);
+                    string mota = this.motatxt.Text;
+                    MemoryStream picture = new MemoryStream();
+                    if (dao.insertViewSach(tuaSach, namXB, tacgia, ngongu, ncc, nxb, theloai, gia, mota))
                     {
-                        MessageBox.Show("Thêm sách thành công", "Thêm sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string ma = dao.getIdNewBook();
+                        anhbia.Image.Save(picture, anhbia.Image.RawFormat);
+                        if (dao.updateAnhBia(ma, picture))
+                        {
+                            MessageBox.Show("Thêm sách thành công", "Thêm sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            reset();
+                        }
+
                     }
-                   
                 }
+                
             }
             catch (Exception ex)
             {
@@ -91,6 +96,7 @@ namespace QuanLyNhaSach
                 if (dao.updateDauSach(maSach, tuaSach, namXB, gia, mota, picture))
                 {
                     MessageBox.Show("Cập nhật thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    reset();
                 }
                 else
                 {
@@ -120,14 +126,13 @@ namespace QuanLyNhaSach
             {
                 if(MessageBox.Show("Bạn có chắc chắn muốn xóa đầu sách này?","Thông tin sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (dao.deleteViewSach(maSach))
+                    MessageBox.Show(dao.deleteViewSach(maSach).ToString());
+                    if (dao.deleteViewSach(maSach) == true)
                     {
                         MessageBox.Show("Xóa thành công", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        reset();
                     }
-                    else
-                    {
-                        MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin sách", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                    }
+
                 }
                 
             }
@@ -136,6 +141,52 @@ namespace QuanLyNhaSach
                 MessageBox.Show(ex.Message);
             }
           
+        }
+        private bool verif()
+        {
+            if(this.tuatxt.Text.Trim()=="" || this.nxbtxt.Text.Trim()==""||this.ncctxt.Text.Trim()=="" || this.ngngutxt.Text.Trim()==""
+                || this.tgtxt.Text.Trim()=="" || this.namxbtxt.Text.Trim()=="" || this.giatxt.Text.Trim()=="" || this.motatxt.Text.Trim()=="")
+            {
+                MessageBox.Show("Trường rỗng", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                int namXB, giaBan;
+                if (int.TryParse(this.namxbtxt.Text, out namXB) && int.TryParse(this.giatxt.Text,out giaBan))
+                {
+                    if (namXB > DateTime.Now.Year)
+                    {
+                        MessageBox.Show("Sai năm xuất bản", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    if (giaBan < 0)
+                    {
+                        MessageBox.Show("Giá bán < 0", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Kiểm tra kiểu dữ liệu", "Thông tin sách", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+           
+            return true;
+        }
+        private void reset()
+        {
+            this.tuatxt.Text = null;
+            this.namxbtxt.Text = null;
+            this.tgtxt.Text = null;
+            this.ngngutxt.Text = null;
+            this.ncctxt.Text = null;
+            this.nxbtxt.Text = null;
+            this.tltxt.Text = null;
+            this.giatxt.Text = null;
+            this.motatxt.Text = null;
+            this.anhbia.Image = Properties.Resources.none_image;
         }
     }
 }

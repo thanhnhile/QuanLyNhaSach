@@ -97,7 +97,7 @@ namespace QuanLyNhaSach
             command.Parameters.Add("@Gia", SqlDbType.Int).Value = gia;
             command.Parameters.Add("@Mota", SqlDbType.Text).Value = mota;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
+            if (command.ExecuteNonQuery()==1)
             {
                 db.closeConnection();
                 return true;
@@ -113,16 +113,9 @@ namespace QuanLyNhaSach
             SqlCommand command = new SqlCommand("delete from ChiTietDauSach where MaSach=@ma", db.GetConnection);
             command.Parameters.Add("@ma", SqlDbType.Char).Value = ma;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            db.closeConnection();
+            return true;
         }
     }
 }
