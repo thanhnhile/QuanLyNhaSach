@@ -93,6 +93,9 @@
     <Compile Include="TacGia.Designer.cs">
       <DependentUpon>TacGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietSach.resx">
       <DependentUpon>ChiTietSach.cs</DependentUpon>
     </EmbeddedResource>
