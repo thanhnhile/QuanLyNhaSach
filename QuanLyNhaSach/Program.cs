@@ -16,7 +16,7 @@ namespace QuanLyNhaSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChangePasswordForm());
+            Application.Run(new EditEmployeeForm());
         }
     }
 }

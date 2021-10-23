@@ -31,3 +31,5 @@ D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.LoginForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.RegisterForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.TacGia.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ChangePasswordForm.resources
+D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.UserForm.resources
+D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.EditEmployeeForm.resources
