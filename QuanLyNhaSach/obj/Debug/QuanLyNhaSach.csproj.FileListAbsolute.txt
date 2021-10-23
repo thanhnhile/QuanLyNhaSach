@@ -35,3 +35,4 @@ D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.UserForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.EditEmployeeForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ThanhToanForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.NhapKhoForm.resources
+D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.SearchForm.resources
