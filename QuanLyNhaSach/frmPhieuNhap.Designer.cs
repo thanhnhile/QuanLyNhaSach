@@ -40,12 +40,8 @@ namespace QuanLyNhaSach
             this.txtmasachauto = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnSuaTTPN = new System.Windows.Forms.Button();
-            this.btnThemTTPN = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtsoluong = new System.Windows.Forms.TextBox();
-            this.btnmasach = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmasach = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,7 +57,6 @@ namespace QuanLyNhaSach
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTPN)).BeginInit();
@@ -169,53 +164,15 @@ namespace QuanLyNhaSach
             this.dgvPhieuNhap.Size = new System.Drawing.Size(326, 208);
             this.dgvPhieuNhap.TabIndex = 0;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.btnSuaTTPN);
-            this.groupBox6.Controls.Add(this.btnThemTTPN);
-            this.groupBox6.Location = new System.Drawing.Point(459, 172);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(320, 53);
-            this.groupBox6.TabIndex = 16;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Các chức năng";
-            // 
-            // btnSuaTTPN
-            // 
-            this.btnSuaTTPN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSuaTTPN.BackgroundImage")));
-            this.btnSuaTTPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSuaTTPN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaTTPN.ForeColor = System.Drawing.Color.White;
-            this.btnSuaTTPN.Location = new System.Drawing.Point(162, 19);
-            this.btnSuaTTPN.Name = "btnSuaTTPN";
-            this.btnSuaTTPN.Size = new System.Drawing.Size(89, 23);
-            this.btnSuaTTPN.TabIndex = 4;
-            this.btnSuaTTPN.Text = "Sửa";
-            this.btnSuaTTPN.UseVisualStyleBackColor = true;
-            // 
-            // btnThemTTPN
-            // 
-            this.btnThemTTPN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemTTPN.BackgroundImage")));
-            this.btnThemTTPN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThemTTPN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTTPN.ForeColor = System.Drawing.Color.White;
-            this.btnThemTTPN.Location = new System.Drawing.Point(53, 18);
-            this.btnThemTTPN.Name = "btnThemTTPN";
-            this.btnThemTTPN.Size = new System.Drawing.Size(87, 23);
-            this.btnThemTTPN.TabIndex = 3;
-            this.btnThemTTPN.Text = "Thêm";
-            this.btnThemTTPN.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtsoluong);
-            this.groupBox2.Controls.Add(this.btnmasach);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtmasach);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtmaphieunhap);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(459, 58);
+            this.groupBox2.Location = new System.Drawing.Point(465, 89);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(320, 108);
             this.groupBox2.TabIndex = 15;
@@ -228,18 +185,6 @@ namespace QuanLyNhaSach
             this.txtsoluong.Name = "txtsoluong";
             this.txtsoluong.Size = new System.Drawing.Size(162, 20);
             this.txtsoluong.TabIndex = 2;
-            // 
-            // btnmasach
-            // 
-            this.btnmasach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnmasach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmasach.ForeColor = System.Drawing.Color.White;
-            this.btnmasach.Location = new System.Drawing.Point(279, 47);
-            this.btnmasach.Name = "btnmasach";
-            this.btnmasach.Size = new System.Drawing.Size(21, 23);
-            this.btnmasach.TabIndex = 3;
-            this.btnmasach.Text = ">";
-            this.btnmasach.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -358,7 +303,6 @@ namespace QuanLyNhaSach
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btdong);
             this.Controls.Add(this.btnthoat);
@@ -372,7 +316,6 @@ namespace QuanLyNhaSach
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
-            this.groupBox6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -391,10 +334,8 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtmasachauto;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtsoluong;
-        private System.Windows.Forms.Button btnmasach;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtmasach;
         private System.Windows.Forms.Label label3;
@@ -408,7 +349,5 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.DataGridView dgvPhieuNhap;
         private System.Windows.Forms.DataGridView dgvTTPN;
         private System.Windows.Forms.Button btnsua;
-        private System.Windows.Forms.Button btnSuaTTPN;
-        private System.Windows.Forms.Button btnThemTTPN;
     }
 }
