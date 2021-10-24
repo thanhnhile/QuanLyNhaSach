@@ -19,5 +19,36 @@ namespace QuanLyNhaSach
             InitializeComponent();
         }
 
+        private void dauSachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dausach frm = new Dausach();
+            frm.ShowDialog();
+        }
+
+        private void ngonNguToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tacGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TacGia frm = new TacGia();
+            frm.Show();
+        }
+
+        private void nhaXuatBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void theLoaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

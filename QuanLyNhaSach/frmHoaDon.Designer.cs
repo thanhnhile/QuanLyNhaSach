@@ -341,9 +341,30 @@ namespace QuanLyNhaSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(800, 527);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label2);
+=======
+            this.ClientSize = new System.Drawing.Size(801, 443);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox6);
+>>>>>>> b16ac25fa8b5649df1b134d890a356a3a7705a1b
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.groupBox2);
