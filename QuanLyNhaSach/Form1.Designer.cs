@@ -117,30 +117,35 @@
             this.ngonNguToolStripMenuItem.Name = "ngonNguToolStripMenuItem";
             this.ngonNguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ngonNguToolStripMenuItem.Text = "Ngôn Ngữ";
+            this.ngonNguToolStripMenuItem.Click += new System.EventHandler(this.ngonNguToolStripMenuItem_Click);
             // 
             // tacGiaToolStripMenuItem
             // 
             this.tacGiaToolStripMenuItem.Name = "tacGiaToolStripMenuItem";
             this.tacGiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tacGiaToolStripMenuItem.Text = "Tác Giả";
+            this.tacGiaToolStripMenuItem.Click += new System.EventHandler(this.tacGiaToolStripMenuItem_Click);
             // 
             // nhaXuatBanToolStripMenuItem
             // 
             this.nhaXuatBanToolStripMenuItem.Name = "nhaXuatBanToolStripMenuItem";
             this.nhaXuatBanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhaXuatBanToolStripMenuItem.Text = "Nhà Xuất Bản";
+            this.nhaXuatBanToolStripMenuItem.Click += new System.EventHandler(this.nhaXuatBanToolStripMenuItem_Click);
             // 
             // theLoaiToolStripMenuItem
             // 
             this.theLoaiToolStripMenuItem.Name = "theLoaiToolStripMenuItem";
             this.theLoaiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.theLoaiToolStripMenuItem.Text = "Thể Loại";
+            this.theLoaiToolStripMenuItem.Click += new System.EventHandler(this.theLoaiToolStripMenuItem_Click);
             // 
             // nhaCungCapToolStripMenuItem
             // 
             this.nhaCungCapToolStripMenuItem.Name = "nhaCungCapToolStripMenuItem";
             this.nhaCungCapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhaCungCapToolStripMenuItem.Text = "Nhà Cung Cấp";
+            this.nhaCungCapToolStripMenuItem.Click += new System.EventHandler(this.nhaCungCapToolStripMenuItem_Click);
             // 
             // khoToolStripMenuItem
             // 
@@ -229,7 +234,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaSach
 {
-    public partial class NhapKhoForm : Form
+    public partial class NXB : Form
     {
-        public NhapKhoForm()
+        public NXB()
         {
             InitializeComponent();
-        }
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

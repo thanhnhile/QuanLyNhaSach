@@ -30,6 +30,10 @@
         {
             this.NhapPhieuButton = new System.Windows.Forms.Button();
             this.PhieuNhapDataGridView = new System.Windows.Forms.DataGridView();
+            this.MaSachColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuaSachColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhapColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.GiaNhapTextBox = new System.Windows.Forms.TextBox();
@@ -41,18 +45,15 @@
             this.MaPNTextBox = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaSachColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TuaSachColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaNhapColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // NhapPhieuButton
             // 
-            this.NhapPhieuButton.Location = new System.Drawing.Point(720, 477);
+            this.NhapPhieuButton.Location = new System.Drawing.Point(540, 388);
+            this.NhapPhieuButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NhapPhieuButton.Name = "NhapPhieuButton";
-            this.NhapPhieuButton.Size = new System.Drawing.Size(167, 32);
+            this.NhapPhieuButton.Size = new System.Drawing.Size(125, 26);
             this.NhapPhieuButton.TabIndex = 53;
             this.NhapPhieuButton.Text = "NHẬP PHIẾU";
             this.NhapPhieuButton.UseVisualStyleBackColor = true;
@@ -66,113 +67,13 @@
             this.TuaSachColumn,
             this.SoLuongColumn,
             this.GiaNhapColumn});
-            this.PhieuNhapDataGridView.Location = new System.Drawing.Point(12, 179);
+            this.PhieuNhapDataGridView.Location = new System.Drawing.Point(9, 145);
+            this.PhieuNhapDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhieuNhapDataGridView.Name = "PhieuNhapDataGridView";
             this.PhieuNhapDataGridView.RowHeadersWidth = 51;
             this.PhieuNhapDataGridView.RowTemplate.Height = 24;
-            this.PhieuNhapDataGridView.Size = new System.Drawing.Size(875, 292);
+            this.PhieuNhapDataGridView.Size = new System.Drawing.Size(656, 237);
             this.PhieuNhapDataGridView.TabIndex = 50;
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Location = new System.Drawing.Point(802, 139);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(85, 32);
-            this.DeleteButton.TabIndex = 49;
-            this.DeleteButton.Text = "XÓA";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // AddButton
-            // 
-            this.AddButton.Location = new System.Drawing.Point(711, 139);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(85, 32);
-            this.AddButton.TabIndex = 48;
-            this.AddButton.Text = "THÊM";
-            this.AddButton.UseVisualStyleBackColor = true;
-            // 
-            // GiaNhapTextBox
-            // 
-            this.GiaNhapTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GiaNhapTextBox.Location = new System.Drawing.Point(523, 139);
-            this.GiaNhapTextBox.Name = "GiaNhapTextBox";
-            this.GiaNhapTextBox.Size = new System.Drawing.Size(182, 32);
-            this.GiaNhapTextBox.TabIndex = 47;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(523, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Giá nhập:";
-            // 
-            // SoLuongTextBox
-            // 
-            this.SoLuongTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoLuongTextBox.Location = new System.Drawing.Point(390, 139);
-            this.SoLuongTextBox.Name = "SoLuongTextBox";
-            this.SoLuongTextBox.Size = new System.Drawing.Size(127, 32);
-            this.SoLuongTextBox.TabIndex = 45;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(387, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Số lượng:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Tựa Sách:";
-            // 
-            // TuaSachComboBox
-            // 
-            this.TuaSachComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TuaSachComboBox.FormattingEnabled = true;
-            this.TuaSachComboBox.Location = new System.Drawing.Point(12, 139);
-            this.TuaSachComboBox.Name = "TuaSachComboBox";
-            this.TuaSachComboBox.Size = new System.Drawing.Size(372, 34);
-            this.TuaSachComboBox.TabIndex = 42;
-            // 
-            // MaPNTextBox
-            // 
-            this.MaPNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaPNTextBox.Location = new System.Drawing.Point(11, 81);
-            this.MaPNTextBox.Name = "MaPNTextBox";
-            this.MaPNTextBox.Size = new System.Drawing.Size(170, 32);
-            this.MaPNTextBox.TabIndex = 39;
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.Location = new System.Drawing.Point(8, 58);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(123, 20);
-            this.UsernameLabel.TabIndex = 38;
-            this.UsernameLabel.Text = "Mã phiếu nhập:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "PHIẾU NHẬP";
             // 
             // MaSachColumn
             // 
@@ -198,11 +99,124 @@
             this.GiaNhapColumn.MinimumWidth = 6;
             this.GiaNhapColumn.Name = "GiaNhapColumn";
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(602, 113);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(64, 26);
+            this.DeleteButton.TabIndex = 49;
+            this.DeleteButton.Text = "XÓA";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(533, 113);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(64, 26);
+            this.AddButton.TabIndex = 48;
+            this.AddButton.Text = "THÊM";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // GiaNhapTextBox
+            // 
+            this.GiaNhapTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiaNhapTextBox.Location = new System.Drawing.Point(392, 113);
+            this.GiaNhapTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GiaNhapTextBox.Name = "GiaNhapTextBox";
+            this.GiaNhapTextBox.Size = new System.Drawing.Size(138, 27);
+            this.GiaNhapTextBox.TabIndex = 47;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(392, 94);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Giá nhập:";
+            // 
+            // SoLuongTextBox
+            // 
+            this.SoLuongTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoLuongTextBox.Location = new System.Drawing.Point(292, 113);
+            this.SoLuongTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SoLuongTextBox.Name = "SoLuongTextBox";
+            this.SoLuongTextBox.Size = new System.Drawing.Size(96, 27);
+            this.SoLuongTextBox.TabIndex = 45;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(290, 94);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Số lượng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Tựa Sách:";
+            // 
+            // TuaSachComboBox
+            // 
+            this.TuaSachComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TuaSachComboBox.FormattingEnabled = true;
+            this.TuaSachComboBox.Location = new System.Drawing.Point(9, 113);
+            this.TuaSachComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TuaSachComboBox.Name = "TuaSachComboBox";
+            this.TuaSachComboBox.Size = new System.Drawing.Size(280, 30);
+            this.TuaSachComboBox.TabIndex = 42;
+            // 
+            // MaPNTextBox
+            // 
+            this.MaPNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaPNTextBox.Location = new System.Drawing.Point(8, 66);
+            this.MaPNTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaPNTextBox.Name = "MaPNTextBox";
+            this.MaPNTextBox.Size = new System.Drawing.Size(128, 27);
+            this.MaPNTextBox.TabIndex = 39;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.Location = new System.Drawing.Point(6, 47);
+            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(106, 17);
+            this.UsernameLabel.TabIndex = 38;
+            this.UsernameLabel.Text = "Mã phiếu nhập:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "PHIẾU NHẬP";
+            // 
             // NhapKhoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 513);
+            this.ClientSize = new System.Drawing.Size(675, 417);
             this.Controls.Add(this.NhapPhieuButton);
             this.Controls.Add(this.PhieuNhapDataGridView);
             this.Controls.Add(this.DeleteButton);
@@ -216,6 +230,7 @@
             this.Controls.Add(this.MaPNTextBox);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NhapKhoForm";
             this.Text = "NhapKhoForm";
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapDataGridView)).EndInit();

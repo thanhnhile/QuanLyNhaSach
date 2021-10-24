@@ -36,3 +36,25 @@ D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.EditEmployeeForm.res
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ThanhToanForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.NhapKhoForm.resources
 D:\DBMS\QuanLyNhaSach\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.SearchForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe.config
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.pdb
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csprojAssemblyReference.cache
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ChangePasswordForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ChiTietSach.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.Dausach.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.EditEmployeeForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.MainForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.frmHoaDon.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.LoginForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.NhapKhoForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.Properties.Resources.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.RegisterForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.SearchForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.TacGia.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.ThanhToanForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.UserForm.resources
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.GenerateResource.cache
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.CoreCompileInputs.cache
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.exe
+D:\HK5 ONLINE\HQTCSDL\DACuoiKi\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.pdb
