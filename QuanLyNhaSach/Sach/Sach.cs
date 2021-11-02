@@ -21,6 +21,7 @@ namespace QuanLyNhaSach
             adapter.Fill(table);
             return table;
         }
+        //Sach
         public  string getIdNewBook()
         {
             string id;
@@ -116,6 +117,77 @@ namespace QuanLyNhaSach
             command.ExecuteNonQuery();
             db.closeConnection();
             return true;
+        }
+        //Nha Xuat Ban
+        public DataTable getViewNXB()
+        {
+            SqlCommand command = new SqlCommand("select * from NhaXuatBan", db.GetConnection);
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public bool insertNXB(string name,string address,string phone)
+        {
+            SqlCommand command = new SqlCommand("pro_InsertNXB", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = "";
+            command.Parameters.AddWithValue("Ten", SqlDbType.NVarChar).Value = name;
+            command.Parameters.AddWithValue("@Diachi", SqlDbType.NVarChar).Value = address;
+            command.Parameters.AddWithValue("@Sdt", SqlDbType.Char).Value = phone;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public DataTable getNXBById(string id)
+        {
+            SqlCommand command = new SqlCommand("select * from NhaXuatBan where MaNXB=@id", db.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Char).Value = id;
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public bool updateNXB(string id,string name,string address,string phone)
+        {
+            SqlCommand command = new SqlCommand("sp_UpdateNXB", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
+            command.Parameters.AddWithValue("@Ten", SqlDbType.NVarChar).Value = name;
+            command.Parameters.AddWithValue("@Diachi", SqlDbType.NVarChar).Value = address;
+            command.Parameters.AddWithValue("@Sdt", SqlDbType.Char).Value = phone;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public bool deleteNXB(string id)
+        {
+            SqlCommand command = new SqlCommand("sp_DeleteNXB", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaNXB", SqlDbType.Char).Value = id;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
         }
     }
 }

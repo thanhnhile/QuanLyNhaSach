@@ -50,17 +50,17 @@
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietSach.cs">
+    <Compile Include="Sach\ChiTietSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietSach.Designer.cs">
+    <Compile Include="Sach\ChiTietSach.Designer.cs">
       <DependentUpon>ChiTietSach.cs</DependentUpon>
     </Compile>
     <Compile Include="connection\myDB.cs" />
-    <Compile Include="Dausach.cs">
+    <Compile Include="Sach\Dausach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dausach.Designer.cs">
+    <Compile Include="Sach\Dausach.Designer.cs">
       <DependentUpon>Dausach.cs</DependentUpon>
     </Compile>
     <Compile Include="EditEmployeeForm.cs">
@@ -69,23 +69,17 @@
     <Compile Include="EditEmployeeForm.Designer.cs">
       <DependentUpon>EditEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDoanhThu.Designer.cs">
       <DependentUpon>frmDoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHoaDon.Designer.cs">
-      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKho.cs">
       <SubType>Form</SubType>
@@ -114,10 +108,10 @@
     <Compile Include="NhapKhoForm.Designer.cs">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NXB.cs">
+    <Compile Include="Sach\NXB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NXB.Designer.cs">
+    <Compile Include="Sach\NXB.Designer.cs">
       <DependentUpon>NXB.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -128,7 +122,7 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sach.cs" />
+    <Compile Include="Sach\Sach.cs" />
     <Compile Include="SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,23 +150,20 @@
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiTietSach.resx">
+    <EmbeddedResource Include="Sach\ChiTietSach.resx">
       <DependentUpon>ChiTietSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dausach.resx">
+    <EmbeddedResource Include="Sach\Dausach.resx">
       <DependentUpon>Dausach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditEmployeeForm.resx">
       <DependentUpon>EditEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoanhThu.resx">
       <DependentUpon>frmDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHoaDon.resx">
-      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKho.resx">
       <DependentUpon>frmKho.cs</DependentUpon>
@@ -189,7 +180,7 @@
     <EmbeddedResource Include="NhapKhoForm.resx">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NXB.resx">
+    <EmbeddedResource Include="Sach\NXB.resx">
       <DependentUpon>NXB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

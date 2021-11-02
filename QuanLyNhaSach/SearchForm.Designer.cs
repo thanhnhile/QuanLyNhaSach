@@ -40,58 +40,64 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 29);
+            this.label1.Size = new System.Drawing.Size(181, 25);
             this.label1.TabIndex = 38;
             this.label1.Text = "DANH MỤC SÁCH";
             // 
             // BookDataGridView
             // 
             this.BookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BookDataGridView.Location = new System.Drawing.Point(17, 93);
+            this.BookDataGridView.Location = new System.Drawing.Point(13, 76);
+            this.BookDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookDataGridView.Name = "BookDataGridView";
             this.BookDataGridView.RowHeadersWidth = 51;
             this.BookDataGridView.RowTemplate.Height = 24;
-            this.BookDataGridView.Size = new System.Drawing.Size(816, 373);
+            this.BookDataGridView.Size = new System.Drawing.Size(612, 303);
             this.BookDataGridView.TabIndex = 39;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(17, 55);
+            this.SearchTextBox.Location = new System.Drawing.Point(13, 45);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(383, 32);
+            this.SearchTextBox.Size = new System.Drawing.Size(288, 27);
             this.SearchTextBox.TabIndex = 40;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(406, 55);
+            this.SearchButton.Location = new System.Drawing.Point(304, 45);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(85, 32);
+            this.SearchButton.Size = new System.Drawing.Size(64, 26);
             this.SearchButton.TabIndex = 49;
             this.SearchButton.Text = "TÌM KIẾM";
             this.SearchButton.UseVisualStyleBackColor = true;
             // 
             // ReloadButton
             // 
-            this.ReloadButton.Location = new System.Drawing.Point(748, 55);
+            this.ReloadButton.Location = new System.Drawing.Point(561, 45);
+            this.ReloadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReloadButton.Name = "ReloadButton";
-            this.ReloadButton.Size = new System.Drawing.Size(85, 32);
+            this.ReloadButton.Size = new System.Drawing.Size(64, 26);
             this.ReloadButton.TabIndex = 50;
             this.ReloadButton.Text = "RELOAD";
             this.ReloadButton.UseVisualStyleBackColor = true;
             // 
             // SearchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 478);
+            this.ClientSize = new System.Drawing.Size(645, 394);
             this.Controls.Add(this.ReloadButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.BookDataGridView);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
             ((System.ComponentModel.ISupportInitialize)(this.BookDataGridView)).EndInit();

@@ -81,9 +81,9 @@ namespace QuanLyNhaSach
             // searchbtn
             // 
             this.searchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbtn.Location = new System.Drawing.Point(514, 124);
+            this.searchbtn.Location = new System.Drawing.Point(491, 124);
             this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(127, 29);
+            this.searchbtn.Size = new System.Drawing.Size(127, 34);
             this.searchbtn.TabIndex = 4;
             this.searchbtn.Text = "Tìm";
             this.searchbtn.UseVisualStyleBackColor = true;

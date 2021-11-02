@@ -38,7 +38,8 @@ namespace QuanLyNhaSach
 
         private void nhaXuatBanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NXB frm = new NXB();
+            frm.Show();
         }
 
         private void theLoaiToolStripMenuItem_Click(object sender, EventArgs e)
