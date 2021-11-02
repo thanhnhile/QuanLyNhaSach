@@ -90,13 +90,13 @@ namespace QuanLyNhaSach
         }
         public bool updateDauSach(string ma,string tua,int namXB,int gia,string mota, System.IO.MemoryStream anh)
         {
-            SqlCommand command = new SqlCommand("exec dbo.sp_UpdateDauSach @Ma,@TuaSach,@AnhBia,@NamXB,@Gia,@Mota", db.GetConnection);
-            command.Parameters.Add("@Ma", SqlDbType.Char).Value = ma;
-            command.Parameters.Add("@AnhBia", SqlDbType.Image).Value = anh.ToArray();
-            command.Parameters.Add("@TuaSach", SqlDbType.NVarChar).Value = tua;
-            command.Parameters.Add("@NamXB", SqlDbType.Int).Value = namXB;
-            command.Parameters.Add("@Gia", SqlDbType.Int).Value = gia;
-            command.Parameters.Add("@Mota", SqlDbType.Text).Value = mota;
+            SqlCommand command = new SqlCommand("sp_UpdateDauSach", db.GetConnection);
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = ma;
+            command.Parameters.AddWithValue("@AnhBia", SqlDbType.Image).Value = anh.ToArray();
+            command.Parameters.AddWithValue("@TuaSach", SqlDbType.NVarChar).Value = tua;
+            command.Parameters.AddWithValue("@NamXB", SqlDbType.Int).Value = namXB;
+            command.Parameters.AddWithValue("@Gia", SqlDbType.Int).Value = gia;
+            command.Parameters.AddWithValue("@Mota", SqlDbType.Text).Value = mota;
             db.openConnection();
             if (command.ExecuteNonQuery()==1)
             {

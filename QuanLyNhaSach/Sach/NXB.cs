@@ -44,6 +44,7 @@ namespace QuanLyNhaSach
                     if (dao.insertNXB(name,address,phone))
                     {
                         MessageBox.Show("Thêm thành công", "Thông tin Nhà Xuất Bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        refreshDGV();
                     }
                     else
                     {
@@ -56,13 +57,6 @@ namespace QuanLyNhaSach
             }
         }
 
-        private void refresh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-            dgv.ReadOnly = true;
-            dgv.DataSource = dao.getViewNXB();
-            dgv.AllowUserToAddRows = false;
-        }
 
         private void dgv_DoubleClick(object sender, EventArgs e)
         {
@@ -95,6 +89,7 @@ namespace QuanLyNhaSach
                     if (dao.updateNXB(id,name, address, phone))
                     {
                         MessageBox.Show("Cập nhật thành công", "Thông tin Nhà Xuất Bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        refreshDGV();
                     }
                     else
                     {
@@ -120,6 +115,7 @@ namespace QuanLyNhaSach
                         if (dao.deleteNXB(id))
                         {
                             MessageBox.Show("Xóa thành công", "Thông tin Nhà Xuất Bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            refreshDGV();
                         }
                         else MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin Nhà Xuất Bản", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     }
@@ -132,6 +128,12 @@ namespace QuanLyNhaSach
                 }
             }
            
+        }
+        private void refreshDGV()
+        {
+            dgv.ReadOnly = true;
+            dgv.DataSource = dao.getViewNXB();
+            dgv.AllowUserToAddRows = false;
         }
     }
 }

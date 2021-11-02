@@ -34,7 +34,6 @@ namespace QuanLyNhaSach
             this.searchBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.refresh = new System.Windows.Forms.LinkLabel();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
@@ -101,24 +100,12 @@ namespace QuanLyNhaSach
             this.label1.TabIndex = 11;
             this.label1.Text = "NHÀ XUẤT BẢN";
             // 
-            // refresh
-            // 
-            this.refresh.AutoSize = true;
-            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(23, 267);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(69, 20);
-            this.refresh.TabIndex = 21;
-            this.refresh.TabStop = true;
-            this.refresh.Text = "Làm mới";
-            this.refresh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.refresh_LinkClicked);
-            // 
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(26, 302);
+            this.dgv.Location = new System.Drawing.Point(26, 288);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(507, 176);
+            this.dgv.Size = new System.Drawing.Size(507, 188);
             this.dgv.TabIndex = 20;
             this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
@@ -239,7 +226,6 @@ namespace QuanLyNhaSach
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.refresh);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
@@ -265,7 +251,6 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel refresh;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button editBtn;
