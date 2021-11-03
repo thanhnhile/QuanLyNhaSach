@@ -23,7 +23,7 @@ namespace QuanLyNhaSach
             dgv.DataSource = dao.getViewNXB();
             dgv.AllowUserToAddRows = false;
         }
-        public bool verif()
+        private bool verif()
         {
             if( this.nameTxt.Text.Trim()=="" || this.addressTxt.Text.Trim()=="" || this.sdtTxt.Text.Trim()=="")
             {

@@ -91,9 +91,10 @@ namespace QuanLyNhaSach
         public bool updateDauSach(string ma,string tua,int namXB,int gia,string mota, System.IO.MemoryStream anh)
         {
             SqlCommand command = new SqlCommand("sp_UpdateDauSach", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = ma;
-            command.Parameters.AddWithValue("@AnhBia", SqlDbType.Image).Value = anh.ToArray();
             command.Parameters.AddWithValue("@TuaSach", SqlDbType.NVarChar).Value = tua;
+            command.Parameters.AddWithValue("@AnhBia", SqlDbType.Image).Value = anh.ToArray();
             command.Parameters.AddWithValue("@NamXB", SqlDbType.Int).Value = namXB;
             command.Parameters.AddWithValue("@Gia", SqlDbType.Int).Value = gia;
             command.Parameters.AddWithValue("@Mota", SqlDbType.Text).Value = mota;
@@ -111,7 +112,8 @@ namespace QuanLyNhaSach
         }
         public bool deleteViewSach(string ma)
         {
-            SqlCommand command = new SqlCommand("delete from ChiTietDauSach where MaSach=@ma", db.GetConnection);
+            SqlCommand command = new SqlCommand("sp_deleteSach", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ma", SqlDbType.Char).Value = ma;
             db.openConnection();
             command.ExecuteNonQuery();
@@ -188,6 +190,82 @@ namespace QuanLyNhaSach
                 db.closeConnection();
                 return false;
             }
+        }
+        //Tac Gia
+        public DataTable getViewTacGia()
+        {
+            SqlCommand command = new SqlCommand("select * from TacGia", db.GetConnection);
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public bool insertTacGia(string name)
+        {
+            SqlCommand command = new SqlCommand("pro_InsertTacGia", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = "";
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value =name;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public bool updateTacGia(string id,string name)
+        {
+            SqlCommand command = new SqlCommand("sp_UpdateTacGia", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public bool deleteTacGia(string id)
+        {
+
+            SqlCommand command = new SqlCommand("sp_DeleteTacGia", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaTG", SqlDbType.Char).Value = id;
+            db.openConnection();
+            command.ExecuteNonQuery();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+        public DataTable getAuthorById(string id)
+        {
+            SqlCommand command = new SqlCommand("select * from TacGia where MaTG=@ma", db.GetConnection);
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = id;
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public DataTable getListBookByAuthor( string name)
+        {
+            SqlCommand command = new SqlCommand("select * from dbo.func_getListBookByAuthor(@name)", db.GetConnection);
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+            DataTable table = this.getTable(command);
+            return table;
         }
     }
 }

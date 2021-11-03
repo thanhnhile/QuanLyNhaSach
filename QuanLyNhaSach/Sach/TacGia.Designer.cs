@@ -31,20 +31,19 @@ namespace QuanLyNhaSach
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.searchTxt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.idTxt = new System.Windows.Forms.TextBox();
+            this.nameTxt = new System.Windows.Forms.TextBox();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,28 +62,12 @@ namespace QuanLyNhaSach
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.searchTxt);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(401, 47);
             this.panel1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tra cứu";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(102, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 26);
-            this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
@@ -94,6 +77,22 @@ namespace QuanLyNhaSach
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm ";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // searchTxt
+            // 
+            this.searchTxt.Location = new System.Drawing.Point(102, 9);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(181, 26);
+            this.searchTxt.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tra cứu";
             // 
             // label3
             // 
@@ -113,77 +112,71 @@ namespace QuanLyNhaSach
             this.label4.TabIndex = 4;
             this.label4.Text = "Tên Tác Giả";
             // 
-            // textBox2
+            // idTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 26);
-            this.textBox2.TabIndex = 3;
+            this.idTxt.Enabled = false;
+            this.idTxt.Location = new System.Drawing.Point(142, 133);
+            this.idTxt.Name = "idTxt";
+            this.idTxt.Size = new System.Drawing.Size(142, 26);
+            this.idTxt.TabIndex = 3;
             // 
-            // textBox3
+            // nameTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(142, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(255, 26);
-            this.textBox3.TabIndex = 5;
+            this.nameTxt.Location = new System.Drawing.Point(142, 171);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(255, 26);
+            this.nameTxt.TabIndex = 5;
             // 
-            // button2
+            // addBtn
             // 
-            this.button2.Location = new System.Drawing.Point(28, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 29);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addBtn.Location = new System.Drawing.Point(28, 225);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(88, 29);
+            this.addBtn.TabIndex = 6;
+            this.addBtn.Text = "Thêm";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // button3
+            // editBtn
             // 
-            this.button3.Location = new System.Drawing.Point(175, 225);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 29);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Cập Nhật";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editBtn.Location = new System.Drawing.Point(175, 225);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(88, 29);
+            this.editBtn.TabIndex = 7;
+            this.editBtn.Text = "Cập Nhật";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
-            // button4
+            // deleteBtn
             // 
-            this.button4.Location = new System.Drawing.Point(309, 225);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 29);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.deleteBtn.Location = new System.Drawing.Point(309, 225);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(88, 29);
+            this.deleteBtn.TabIndex = 8;
+            this.deleteBtn.Text = "Xóa";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 286);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(401, 176);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 261);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Làm mới";
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(12, 286);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(401, 176);
+            this.dgv.TabIndex = 9;
+            this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
             // TacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 474);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.editBtn);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.nameTxt);
+            this.Controls.Add(this.idTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -192,9 +185,10 @@ namespace QuanLyNhaSach
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TacGia";
             this.Text = "TacGia";
+            this.Load += new System.EventHandler(this.TacGia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,15 +200,14 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox idTxt;
+        private System.Windows.Forms.TextBox nameTxt;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

@@ -29,10 +29,22 @@ namespace QuanLyNhaSach
             pic = (DataGridViewImageColumn)ChiTietDauSach.Columns[2];
             pic.ImageLayout = DataGridViewImageCellLayout.Stretch;
             ChiTietDauSach.AllowUserToAddRows = false;
+            
 
         }
+        private void checkKho()
+        {
+            for(int i=0;i< ChiTietDauSach.Rows.Count; i++)
+            {
+                string sl = ChiTietDauSach.Rows[i].Cells["Kho"].Value.ToString();
+                if (sl.Equals("0"))
+                {
+                    ChiTietDauSach.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
+        }
 
-        public void fillGrid(DataGridView dgv, SqlCommand command)
+        private void fillGrid(DataGridView dgv, SqlCommand command)
         {
             dgv.ReadOnly = true;
             dgv.RowTemplate.Height = 80;

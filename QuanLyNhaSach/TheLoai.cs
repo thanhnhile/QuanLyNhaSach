@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaSach
 {
-    public partial class TacGia : Form
+    public partial class TheLoai : Form
     {
-        public TacGia()
+        public TheLoai()
         {
             InitializeComponent();
         }

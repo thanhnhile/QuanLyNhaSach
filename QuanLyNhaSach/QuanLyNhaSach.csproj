@@ -129,10 +129,10 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TacGia.cs">
+    <Compile Include="Sach\TacGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TacGia.Designer.cs">
+    <Compile Include="Sach\TacGia.Designer.cs">
       <DependentUpon>TacGia.cs</DependentUpon>
     </Compile>
     <Compile Include="ThanhToanForm.cs">
@@ -140,6 +140,12 @@
     </Compile>
     <Compile Include="ThanhToanForm.Designer.cs">
       <DependentUpon>ThanhToanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheLoai.Designer.cs">
+      <DependentUpon>TheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
@@ -199,7 +205,7 @@
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TacGia.resx">
+    <EmbeddedResource Include="Sach\TacGia.resx">
       <DependentUpon>TacGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhToanForm.resx">
