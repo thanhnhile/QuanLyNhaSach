@@ -50,6 +50,18 @@
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sach\NgonNgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sach\NgonNgu.Designer.cs">
+      <DependentUpon>NgonNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sach\NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sach\NhaCungCap.Designer.cs">
+      <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sach\ChiTietSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,10 +153,10 @@
     <Compile Include="ThanhToanForm.Designer.cs">
       <DependentUpon>ThanhToanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TheLoai.cs">
+    <Compile Include="Sach\TheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TheLoai.Designer.cs">
+    <Compile Include="Sach\TheLoai.Designer.cs">
       <DependentUpon>TheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForm.cs">
@@ -186,6 +198,12 @@
     <EmbeddedResource Include="NhapKhoForm.resx">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sach\NgonNgu.resx">
+      <DependentUpon>NgonNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sach\NhaCungCap.resx">
+      <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sach\NXB.resx">
       <DependentUpon>NXB.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sach\TheLoai.resx">
+      <DependentUpon>TheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>

@@ -27,7 +27,8 @@ namespace QuanLyNhaSach
 
         private void ngonNguToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NgonNgu frm = new NgonNgu();
+            frm.Show();
         }
 
         private void tacGiaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,12 +45,14 @@ namespace QuanLyNhaSach
 
         private void theLoaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            TheLoai frm = new TheLoai();
+            frm.Show();
         }
 
         private void nhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NhaCungCap frm = new NhaCungCap();
+            frm.Show();
         }
     }
 }

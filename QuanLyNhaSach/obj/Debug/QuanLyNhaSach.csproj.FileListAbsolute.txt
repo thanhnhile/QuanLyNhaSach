@@ -110,3 +110,6 @@ D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.Generate
 D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.csproj.CoreCompileInputs.cache
 D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.exe
 D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.pdb
+D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.NgonNgu.resources
+D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.TheLoai.resources
+D:\HK5 ONLINE\HQTCSDL\QLNS\QuanLyNhaSach\obj\Debug\QuanLyNhaSach.NhaCungCap.resources

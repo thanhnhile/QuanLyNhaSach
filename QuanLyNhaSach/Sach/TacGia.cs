@@ -40,10 +40,7 @@ namespace QuanLyNhaSach
                         MessageBox.Show("Thêm thành công", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         refreshDGV();
                     }
-                    else
-                    {
-                        MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin Tác Giả", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                    }
+                    
                 }
                 else MessageBox.Show("Trường rỗng", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -66,10 +63,7 @@ namespace QuanLyNhaSach
                         MessageBox.Show("Cập nhật thành công", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         refreshDGV();
                     }
-                    else
-                    {
-                        MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin Tác Giả", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                    }
+                   
                 }
                 else MessageBox.Show("Trường rỗng", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -93,7 +87,7 @@ namespace QuanLyNhaSach
                             MessageBox.Show("Xóa thành công", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             refreshDGV();
                         }
-                        else MessageBox.Show("Lỗi!Kiểm tra lại", "Thông tin Tác Giả", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        
                     }
                     else MessageBox.Show("Trường rỗng", "Thông tin Tác Giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 

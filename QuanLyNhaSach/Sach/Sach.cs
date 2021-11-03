@@ -21,6 +21,15 @@ namespace QuanLyNhaSach
             adapter.Fill(table);
             return table;
         }
+        //Tim kiem 
+        public DataTable search(string txt)
+        {
+            SqlCommand command = new SqlCommand("select * from fu_TimKiemSach(@text,null,null,null)", db.GetConnection);
+            command.Parameters.Add("@text", SqlDbType.NVarChar).Value = txt;
+            DataTable result = getTable(command);
+            return result;
+
+        }
         //Sach
         public  string getIdNewBook()
         {
@@ -136,16 +145,8 @@ namespace QuanLyNhaSach
             command.Parameters.AddWithValue("@Diachi", SqlDbType.NVarChar).Value = address;
             command.Parameters.AddWithValue("@Sdt", SqlDbType.Char).Value = phone;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            return true;
         }
         public DataTable getNXBById(string id)
         {
@@ -163,16 +164,8 @@ namespace QuanLyNhaSach
             command.Parameters.AddWithValue("@Diachi", SqlDbType.NVarChar).Value = address;
             command.Parameters.AddWithValue("@Sdt", SqlDbType.Char).Value = phone;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            return true;
         }
         public bool deleteNXB(string id)
         {
@@ -180,16 +173,8 @@ namespace QuanLyNhaSach
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@MaNXB", SqlDbType.Char).Value = id;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            return true;
         }
         //Tac Gia
         public DataTable getViewTacGia()
@@ -205,16 +190,8 @@ namespace QuanLyNhaSach
             command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = "";
             command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value =name;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            return true;
         }
         public bool updateTacGia(string id,string name)
         {
@@ -223,16 +200,8 @@ namespace QuanLyNhaSach
             command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
             command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
             db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            command.ExecuteNonQuery();
+            return true;
         }
         public bool deleteTacGia(string id)
         {
@@ -242,16 +211,7 @@ namespace QuanLyNhaSach
             command.Parameters.AddWithValue("@MaTG", SqlDbType.Char).Value = id;
             db.openConnection();
             command.ExecuteNonQuery();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                db.closeConnection();
-                return true;
-            }
-            else
-            {
-                db.closeConnection();
-                return false;
-            }
+            return true;
         }
         public DataTable getAuthorById(string id)
         {
@@ -266,6 +226,131 @@ namespace QuanLyNhaSach
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
             DataTable table = this.getTable(command);
             return table;
+        }
+        //Ngon Ngu
+        public DataTable getViewNgonNgu()
+        {
+            SqlCommand command = new SqlCommand("select * from NgonNgu", db.GetConnection);
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public DataTable getNgonNguById(string id)
+        {
+            SqlCommand command = new SqlCommand("select * from NgonNgu where MaNN=@ma", db.GetConnection);
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = id;
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public bool insertNgonNgu(string name)
+        {
+            SqlCommand command = new SqlCommand("pro_InsertNgonNgu",db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = " ";
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+            return true;
+        }
+        public bool updateNgonNgu(string id,string name)
+        {
+            SqlCommand command = new SqlCommand("sp_UpdateNgonNgu", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+            return true;
+        }
+        public bool deleteNgonNgu(string id)
+        {
+            SqlCommand command = new SqlCommand("sp_DeleteNgonNgu", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaNN", SqlDbType.Char).Value = id;
+            db.openConnection();
+            command.ExecuteNonQuery();
+            return true;
+
+        }
+
+        //The Loai
+        public DataTable getViewTheLoai()
+        {
+            SqlCommand command = new SqlCommand("select * from TheLoai", db.GetConnection);
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public DataTable getTheLoaiById(string id)
+        {
+            SqlCommand command = new SqlCommand("select * from TheLoai where MaTL=@ma", db.GetConnection);
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = id;
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public void insertTheLoai(string name)
+        {
+            SqlCommand command = new SqlCommand("pro_InsertTheLoai", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = " ";
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+        }
+        public void updateTheLoai(string id,string name)
+        {
+            SqlCommand command = new SqlCommand("sp_UpdateTheLoai", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+        }
+        public void deleteTheLoai(string id)
+        {
+            SqlCommand command = new SqlCommand("sp_DeleteTheLoai", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaTL", SqlDbType.Char).Value = id;
+            db.openConnection();
+            command.ExecuteNonQuery();
+        }
+        //Nha Cung Cap
+        public DataTable getViewNCC()
+        {
+            SqlCommand command = new SqlCommand("select * from NhaCungCap", db.GetConnection);
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public DataTable getNCCById(string id)
+        {
+            SqlCommand command = new SqlCommand("select * from NhaCungCap where MaNCC=@ma", db.GetConnection);
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = id;
+            DataTable table = this.getTable(command);
+            return table;
+        }
+        public void insertNCC(string name)
+        {
+            SqlCommand command = new SqlCommand("pro_InsertNCC", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = " ";
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+        }
+        public void updateNCC(string id,string name)
+        {
+            SqlCommand command = new SqlCommand("sp_UpdateNCC", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Ma", SqlDbType.Char).Value = id;
+            command.Parameters.AddWithValue("@Ten", SqlDbType.Char).Value = name;
+            db.openConnection();
+            command.ExecuteNonQuery();
+        }
+        public void deleteNCC(string id)
+        {
+            SqlCommand command = new SqlCommand("sp_DeleteNCC", db.GetConnection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaNCC", SqlDbType.Char).Value = id;
+            db.openConnection();
+            command.ExecuteNonQuery();
         }
     }
 }

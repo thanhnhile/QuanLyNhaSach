@@ -84,5 +84,16 @@ namespace QuanLyNhaSach
             pic.ImageLayout = DataGridViewImageCellLayout.Stretch;
             ChiTietDauSach.AllowUserToAddRows = false;
         }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            if (this.searchbtn.Text.Trim() != "")
+            {
+                string searchTxt = this.searchbtn.Text.Trim();
+                this.ChiTietDauSach.DataSource = dao.search(searchTxt);
+            }
+           
+            
+        }
     }
 }

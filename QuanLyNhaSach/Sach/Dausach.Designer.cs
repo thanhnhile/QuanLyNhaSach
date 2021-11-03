@@ -33,7 +33,7 @@ namespace QuanLyNhaSach
             this.refreshbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.searchbtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ChiTietDauSach = new System.Windows.Forms.DataGridView();
@@ -46,7 +46,7 @@ namespace QuanLyNhaSach
             this.panel1.Controls.Add(this.refreshbtn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.searchbtn);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.searchTxt);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ChiTietDauSach);
@@ -87,13 +87,14 @@ namespace QuanLyNhaSach
             this.searchbtn.TabIndex = 4;
             this.searchbtn.Text = "Tìm";
             this.searchbtn.UseVisualStyleBackColor = true;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
             // 
-            // textBox1
+            // searchTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(220, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 24);
-            this.textBox1.TabIndex = 3;
+            this.searchTxt.Location = new System.Drawing.Point(220, 129);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(254, 24);
+            this.searchTxt.TabIndex = 3;
             // 
             // label2
             // 
@@ -147,7 +148,7 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView ChiTietDauSach;
         private System.Windows.Forms.Button searchbtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button refreshbtn;
         private System.Windows.Forms.Button button1;

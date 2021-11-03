@@ -44,8 +44,7 @@ namespace QuanLyNhaSach
                 this.motatxt.Text = table.Rows[0][10].ToString();
             }
         }
-        //String tua,int namXB,String tg,string ngonngu,string ncc,string nxb,string tl,
-        //int gia,string mota
+        
         private void addbtn_Click(object sender, EventArgs e)
         {
             try
