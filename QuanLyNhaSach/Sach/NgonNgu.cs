@@ -28,8 +28,6 @@ namespace QuanLyNhaSach
             this.ngonNguCB.DataSource = dao.getViewNgonNgu();
             this.ngonNguCB.ValueMember = "MaNN";
             this.ngonNguCB.DisplayMember = "TenNgonNgu";
-            this.idTxt.Text = "";
-            this.nameTxt.Text ="";
         }
 
         private void ngonNguCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,7 +102,6 @@ namespace QuanLyNhaSach
                             MessageBox.Show("Xóa thành công", "Thông tin Ngôn Ngữ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.refresh();
                         }
-                       
                     }
                     else MessageBox.Show("Trường rỗng", "Thông tin Ngôn Ngữ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 

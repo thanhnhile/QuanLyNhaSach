@@ -86,11 +86,20 @@ namespace QuanLyNhaSach
         }
 
         private void searchbtn_Click(object sender, EventArgs e)
+
         {
             if (this.searchbtn.Text.Trim() != "")
             {
                 string searchTxt = this.searchbtn.Text.Trim();
-                this.ChiTietDauSach.DataSource = dao.search(searchTxt);
+                DataTable result = dao.search(searchTxt);
+                if (result.Rows.Count > 0)
+                {
+                    this.ChiTietDauSach.DataSource = result;
+                    ChiTietDauSach.ReadOnly = true;
+                    ChiTietDauSach.RowTemplate.Height = 80;
+                }
+                else MessageBox.Show("Khong tìm ra");
+               
             }
            
             

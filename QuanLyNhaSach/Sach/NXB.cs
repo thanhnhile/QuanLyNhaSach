@@ -135,5 +135,20 @@ namespace QuanLyNhaSach
             dgv.DataSource = dao.getViewNXB();
             dgv.AllowUserToAddRows = false;
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            if (this.searchTxt.Text.Trim() != "")
+            {
+                string searchTxt = this.searchTxt.Text;
+                DataTable tgTable = dao.searchNXB(searchTxt);
+                if (tgTable.Rows.Count > 0)
+                {
+                    this.dgv.DataSource = tgTable;
+                }
+                else MessageBox.Show("Không có kết quả", "Thông tin Nhà xuất bản");
+
+            }
+        }
     }
 }

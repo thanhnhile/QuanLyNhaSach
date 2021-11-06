@@ -107,5 +107,20 @@ namespace QuanLyNhaSach
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.searchTxt.Text.Trim() != "")
+            {
+                string searchTxt = this.searchTxt.Text;
+                DataTable tgTable = dao.searchNCC(searchTxt);
+                if (tgTable.Rows.Count > 0)
+                {
+                    this.dgv.DataSource = tgTable;
+                }
+                else MessageBox.Show("Không có kết quả", "Thông tin Nhà cung cấp");
+
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace QuanLyNhaSach
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchtxt = new System.Windows.Forms.TextBox();
+            this.searchTxt = new System.Windows.Forms.TextBox();
             this.searchBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,22 +53,22 @@ namespace QuanLyNhaSach
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.searchtxt);
+            this.panel1.Controls.Add(this.searchTxt);
             this.panel1.Controls.Add(this.searchBtn);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(13, 83);
+            this.panel1.Location = new System.Drawing.Point(26, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(401, 47);
             this.panel1.TabIndex = 12;
             // 
-            // searchtxt
+            // searchTxt
             // 
-            this.searchtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchtxt.Location = new System.Drawing.Point(108, 10);
-            this.searchtxt.Name = "searchtxt";
-            this.searchtxt.Size = new System.Drawing.Size(182, 24);
-            this.searchtxt.TabIndex = 17;
+            this.searchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxt.Location = new System.Drawing.Point(108, 10);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(182, 24);
+            this.searchTxt.TabIndex = 17;
             // 
             // searchBtn
             // 
@@ -78,6 +78,7 @@ namespace QuanLyNhaSach
             this.searchBtn.TabIndex = 2;
             this.searchBtn.Text = "Tìm ";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // label2
             // 
@@ -259,7 +260,7 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.TextBox idTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox searchtxt;
+        private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox sdtTxt;
         private System.Windows.Forms.Label label6;

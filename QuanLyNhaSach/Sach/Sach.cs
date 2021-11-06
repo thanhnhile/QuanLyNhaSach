@@ -21,7 +21,7 @@ namespace QuanLyNhaSach
             adapter.Fill(table);
             return table;
         }
-        //Tim kiem 
+        //Tim kiem DauSach
         public DataTable search(string txt)
         {
             SqlCommand command = new SqlCommand("select * from fu_TimKiemSach(@text,null,null,null)", db.GetConnection);
@@ -30,7 +30,28 @@ namespace QuanLyNhaSach
             return result;
 
         }
-        //Sach
+        //Tac gia
+        public DataTable searchTG(string txt)
+        {
+            SqlCommand cmd = new SqlCommand("select * from TacGia where TenTacGia like N'%" + txt + "%'", db.GetConnection);
+            DataTable table = getTable(cmd);
+            return table;
+        }
+        //NXB
+        public DataTable searchNXB(string txt)
+        {
+            SqlCommand cmd = new SqlCommand("select * from NhaXuatBan where TenNXB like N'%" + txt + "%'", db.GetConnection);
+            DataTable table = getTable(cmd);
+            return table;
+        }
+        //NCC
+        public DataTable searchNCC(string txt)
+        {
+            SqlCommand cmd = new SqlCommand("select * from NhaCungCap where TenNCC like N'%" + txt + "%'", db.GetConnection);
+            DataTable table = getTable(cmd);
+            return table;
+        }
+        // CRUD Sach
         public  string getIdNewBook()
         {
             string id;

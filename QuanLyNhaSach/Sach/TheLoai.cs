@@ -38,10 +38,8 @@ namespace QuanLyNhaSach
         private void refresh()
         {
             this.theLoaiCB.DataSource = dao.getViewTheLoai();
-            this.theLoaiCB.ValueMember = "MaNN";
-            this.theLoaiCB.DisplayMember = "TenNgonNgu";
-            this.idTxt.Text = "";
-            this.nameTxt.Text = "";
+            this.theLoaiCB.ValueMember = "MaTL";
+            this.theLoaiCB.DisplayMember = "TenTL";
         }
 
         private void addBtn_Click(object sender, EventArgs e)
