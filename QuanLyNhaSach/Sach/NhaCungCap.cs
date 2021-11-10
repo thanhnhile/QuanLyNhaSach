@@ -22,6 +22,8 @@ namespace QuanLyNhaSach
             this.dgv.DataSource = dao.getViewNCC();
             this.dgv.ReadOnly = true;
             this.dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã";
+            dgv.Columns[1].HeaderText = "Nhà Cung Cấp";
             this.nameTxt.Text = "";
         }
         private void addBtn_Click(object sender, EventArgs e)
@@ -92,6 +94,8 @@ namespace QuanLyNhaSach
             this.dgv.DataSource = dao.getViewNCC();
             this.dgv.ReadOnly = true;
             this.dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã";
+            dgv.Columns[1].HeaderText = "Nhà Cung Cấp";
         }
 
         private void dgv_DoubleClick(object sender, EventArgs e)

@@ -22,12 +22,16 @@ namespace QuanLyNhaSach
             dgv.ReadOnly = true;
             dgv.DataSource = dao.getViewTacGia();
             dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã Tác Giả";
+            dgv.Columns[1].HeaderText = "Tên Tác Giả";
         }
         private void refreshDGV()
         {
             dgv.ReadOnly = true;
             dgv.DataSource = dao.getViewTacGia();
             dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã Tác Giả";
+            dgv.Columns[1].HeaderText = "Tên Tác Giả";
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
@@ -109,6 +113,11 @@ namespace QuanLyNhaSach
                 this.idTxt.Text = tg.Rows[0][0].ToString();
                 this.nameTxt.Text = tg.Rows[0][1].ToString();
                 dgv.DataSource = dao.getListBookByAuthor(tg.Rows[0][1].ToString());
+                dgv.Columns[0].HeaderText = "Mã";
+                dgv.Columns[1].HeaderText = "Tựa";
+                dgv.Columns[2].HeaderText = "Năm";
+                dgv.Columns[3].HeaderText = "Ngôn Ngữ";
+                dgv.Columns[4].HeaderText = "Thể Loại";
             }
             else
             {

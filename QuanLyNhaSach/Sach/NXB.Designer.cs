@@ -34,7 +34,6 @@ namespace QuanLyNhaSach
             this.searchBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv = new System.Windows.Forms.DataGridView();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
@@ -46,7 +45,10 @@ namespace QuanLyNhaSach
             this.sdtTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.addressTxt = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,15 +102,6 @@ namespace QuanLyNhaSach
             this.label1.Size = new System.Drawing.Size(215, 31);
             this.label1.TabIndex = 11;
             this.label1.Text = "NHÀ XUẤT BẢN";
-            // 
-            // dgv
-            // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(26, 288);
-            this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(507, 188);
-            this.dgv.TabIndex = 20;
-            this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
             // deleteBtn
             // 
@@ -216,18 +209,37 @@ namespace QuanLyNhaSach
             this.addressTxt.Size = new System.Drawing.Size(182, 24);
             this.addressTxt.TabIndex = 25;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(12, 285);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(521, 191);
+            this.panel2.TabIndex = 26;
+            // 
+            // dgv
+            // 
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(3, 3);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(507, 185);
+            this.dgv.TabIndex = 21;
+            // 
             // NXB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 488);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.addressTxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.sdtTxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.addBtn);
@@ -240,6 +252,7 @@ namespace QuanLyNhaSach
             this.Load += new System.EventHandler(this.NXB_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,7 +265,6 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button addBtn;
@@ -265,5 +277,7 @@ namespace QuanLyNhaSach
         private System.Windows.Forms.TextBox sdtTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox addressTxt;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

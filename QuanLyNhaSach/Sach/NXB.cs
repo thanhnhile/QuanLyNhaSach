@@ -22,6 +22,10 @@ namespace QuanLyNhaSach
             dgv.ReadOnly = true;
             dgv.DataSource = dao.getViewNXB();
             dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã";
+            dgv.Columns[1].HeaderText = "Nhà Xuất Bản";
+            dgv.Columns[2].HeaderText = "Địa Chỉ";
+            dgv.Columns[3].HeaderText = "SĐT";
         }
         private bool verif()
         {
@@ -134,6 +138,10 @@ namespace QuanLyNhaSach
             dgv.ReadOnly = true;
             dgv.DataSource = dao.getViewNXB();
             dgv.AllowUserToAddRows = false;
+            dgv.Columns[0].HeaderText = "Mã";
+            dgv.Columns[1].HeaderText = "Nhà Xuất Bản";
+            dgv.Columns[2].HeaderText = "Địa Chỉ";
+            dgv.Columns[3].HeaderText = "SĐT";
         }
 
         private void searchBtn_Click(object sender, EventArgs e)

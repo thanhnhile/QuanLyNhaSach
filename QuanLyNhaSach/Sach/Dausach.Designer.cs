@@ -120,9 +120,10 @@ namespace QuanLyNhaSach
             // ChiTietDauSach
             // 
             this.ChiTietDauSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChiTietDauSach.Location = new System.Drawing.Point(29, 225);
+            this.ChiTietDauSach.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChiTietDauSach.Location = new System.Drawing.Point(24, 228);
             this.ChiTietDauSach.Name = "ChiTietDauSach";
-            this.ChiTietDauSach.Size = new System.Drawing.Size(878, 310);
+            this.ChiTietDauSach.Size = new System.Drawing.Size(881, 310);
             this.ChiTietDauSach.TabIndex = 0;
             this.ChiTietDauSach.DoubleClick += new System.EventHandler(this.ChiTietDauSach_DoubleClick);
             // 

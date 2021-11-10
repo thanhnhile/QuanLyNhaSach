@@ -29,17 +29,31 @@ namespace QuanLyNhaSach
             pic = (DataGridViewImageColumn)ChiTietDauSach.Columns[2];
             pic.ImageLayout = DataGridViewImageCellLayout.Stretch;
             ChiTietDauSach.AllowUserToAddRows = false;
-            
+            ChiTietDauSach.Columns[0].HeaderText = "Mã";
+            ChiTietDauSach.Columns[1].HeaderText = "Tựa";
+            ChiTietDauSach.Columns[2].HeaderText = "Ảnh Bìa";
+            ChiTietDauSach.Columns[3].HeaderText = "Năm";
+            ChiTietDauSach.Columns[4].HeaderText = "Tác Giả";
+            ChiTietDauSach.Columns[5].HeaderText = "Ngôn Ngữ";
+            ChiTietDauSach.Columns[6].HeaderText = "Thể Loại";
+            ChiTietDauSach.Columns[7].HeaderText = "Giá Bán";
+            ChiTietDauSach.Columns[8].HeaderText = "Nhà Xuất Bản";
+            ChiTietDauSach.Columns[9].HeaderText = "Nhà Cung Cấp";
+            ChiTietDauSach.Columns[10].HeaderText = "Kho";
+            ChiTietDauSach.Columns[11].HeaderText = "Mô Tả";
+            ChiTietDauSach.Columns[1].Width = 200;
+            this.checkKho();
 
         }
         private void checkKho()
         {
             for(int i=0;i< ChiTietDauSach.Rows.Count; i++)
             {
-                string sl = ChiTietDauSach.Rows[i].Cells["Kho"].Value.ToString();
+                string sl = ChiTietDauSach.Rows[i].Cells[10].Value.ToString();
                 if (sl.Equals("0"))
                 {
-                    ChiTietDauSach.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                    ChiTietDauSach.Rows[i].DefaultCellStyle.BackColor = Color.Blue;
+                    ChiTietDauSach.Rows[i].DefaultCellStyle.ForeColor = Color.White;
                 }
             }
         }
@@ -83,6 +97,20 @@ namespace QuanLyNhaSach
             pic = (DataGridViewImageColumn)ChiTietDauSach.Columns[2];
             pic.ImageLayout = DataGridViewImageCellLayout.Stretch;
             ChiTietDauSach.AllowUserToAddRows = false;
+            ChiTietDauSach.AllowUserToAddRows = false;
+            ChiTietDauSach.Columns[0].HeaderText = "Mã";
+            ChiTietDauSach.Columns[1].HeaderText = "Tựa";
+            ChiTietDauSach.Columns[2].HeaderText = "Ảnh Bìa";
+            ChiTietDauSach.Columns[3].HeaderText = "Năm";
+            ChiTietDauSach.Columns[4].HeaderText = "Tác Giả";
+            ChiTietDauSach.Columns[5].HeaderText = "Ngôn Ngữ";
+            ChiTietDauSach.Columns[6].HeaderText = "Thể Loại";
+            ChiTietDauSach.Columns[7].HeaderText = "Giá Bán";
+            ChiTietDauSach.Columns[8].HeaderText = "Nhà Xuất Bản";
+            ChiTietDauSach.Columns[9].HeaderText = "Nhà Cung Cấp";
+            ChiTietDauSach.Columns[10].HeaderText = "Kho";
+            ChiTietDauSach.Columns[11].HeaderText = "Mô Tả";
+            this.checkKho();
         }
 
         private void searchbtn_Click(object sender, EventArgs e)
